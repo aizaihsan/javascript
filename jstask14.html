@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for = "name"> File Name  </label>
+    <input type="text" id="id" placeholder=" Enter File Name" > 
+    <button  onclick = "myfunc()"> submit </button>
+    <p id = "result"> </p>
+    
+    <script>
+
+       
+        function myfunc()
+        {
+             var filename=document.getElementById('id').value;
+             if (filename.includes("."))
+             {
+                var ext= filename.split('.');
+                var extension= ext.pop();
+                document.getElementById('result').innerHTML= extension;
+             }
+             else{
+                document.getElementById('result').innerHTML = "No Extesion existed";
+             }
+           
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
