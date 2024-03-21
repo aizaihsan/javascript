@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <p id="f"> </p> 
+    <form>
+        <label for= "celsius" > Celsius: </label>
+        <input placeholder="Enter Temperature in celsius" id="cel" value="" /><br>
+        <label for= "fahrenheit" > Fahrenheit: </label>
+        <input placeholder="Enter Temperature in fahrenheit" id="fahr" value="" /><br>
+        <input type="button" onClick="CtoF()" Value="C to F" />
+        <input type="button" onClick="FtoC()" Value="F to C" />
+        </form>
+        <p id = "result"></p>
+        
+
+<script>
+    function CtoF()
+    {
+        var CTemp= document.getElementById("cel").value;
+        var CtoFahr = CTemp * 9 / 5 + 32;
+        document.getElementById('result'). innerHTML = CTemp + " C is" +CtoFahr +"F." ;
+}
+
+function FtoC() 
+{
+    var fTemp= document.getElementById("fahr").value;
+    var fToCel = (fTemp - 32) * 5 / 9;
+    document.getElementById('result'). innerHTML = fTemp + " F is" +fToCel +"C." ;
+    
+} 
+</script>
+    
+
+</body>
+</html>
