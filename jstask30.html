@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difference</title>
+
+</head>
+<body>
+    <label for = "String"> String  </label>
+    <input type="text" id="id" placeholder=" Enter a String" > 
+    <button  onclick = "string_check()"> submit </button>
+    <p id = "result"> </p>
+    <script>
+   function string_check() {
+    var str1 = document.getElementById('id').value;
+
+    if (str1.substring(4, 10) === 'String') {
+        str1= str1.substring(0,4) + str1.substring(10, str1.length);
+        }
+   
+           
+        document.getElementById('result').innerHTML= str1;
+
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difference</title>
+
+</head>
+<body>
+    <label for = "String"> String  </label>
+    <input type="text" id="id" placeholder=" Enter a String" > 
+   
+    <button  onclick = "update_string()"> submit </button>
+    <p id = "result"> </p>
+    <script>
+   function update_string() {
+    var str = document.getElementById('id').value;
+    if (str.legnth <4)
+    {
+        str= "string is short";
+    }
+    else{
+
+    var last = str.substring(str.length-3,str.length);
+
+    str = last + str + last;
+    }
+    document.getElementById('result').innerHTML= str;
+
+
+}
+    </script>
+</body>
+</html>

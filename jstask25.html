@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difference</title>
+
+</head>
+<body>
+    <label for = "Number"> Number  </label>
+    <input type="number" id="id" placeholder=" Enter a Number" > 
+    <button  onclick = "multiple()"> submit </button>
+    <p id = "result"> </p>
+    <script>
+        function multiple() {
+            var x = document.getElementById('id').value;
+            var txt;
+            x= parseInt(x);
+            if(x%3==0 || x%7==0)
+            {
+                text="its a multiple of 3 or 7";
+
+            }
+            else{
+                text="its not a multiple of 3 or 7"
+            }
+
+            document.getElementById('result').innerHTML= text;
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for= "Number1" > Number 1: </label>
+        <input type="number" placeholder="Enter 1st number" id="Number1" value="" /><br>
+        <label for= "Number2" > Number 2: </label>
+        <input type="number" placeholder="Enter 2nd number" id="Number2" value="" /><br>
+        <label for= "Number2" > Number 3: </label>
+        <input type="number" placeholder="Enter 3rd number" id="Number3" value="" /><br>
+        <input type="button" onclick="check()" Value="check" />
+        </form>
+        <p id = "result"></p>
+
+
+    <script>
+    function check() {
+
+        var x= document.getElementById('Number1').value;
+        var y=document.getElementById('Number2').value;
+        var z=document.getElementById('Number3').value;
+        x=  parseInt(x);
+        y=parseInt(y);
+        z=parseInt(z);
+
+ 
+        if (x< 90 && x>50 || y<90 && y>50 || z<90 && z>50) {
+            var check = true;
+         } 
+         else{
+            var check = false;
+         }
+        document.getElementById('result').innerHTML= check;
+
+    }
+
+    </script>
+    
+</body>
+</html>
