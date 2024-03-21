@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for= "Number1" > Number 1: </label>
+        <input type="number" placeholder="Enter 1st number" id="Number1" value="" /><br>
+        <label for= "Number2" > Number 2: </label>
+        <input type="number" placeholder="Enter 2nd number" id="Number2" value="" /><br>
+        <input type="button" onclick="check()" Value="Check" />
+        </form>
+        <p id = "result"></p>
+
+
+    <script>
+    function check() {
+
+        var x= document.getElementById('Number1').value;
+        var y=document.getElementById('Number2').value;
+        x=  parseInt(x);
+        y=parseInt(y);
+       
+        var check= ((x == 50 || y == 50) || (x + y == 50));
+
+        document.getElementById('result').innerHTML= check;
+
+    }
+
+    </script>
+    
+</body>
+</html>

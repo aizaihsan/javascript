@@ -13,13 +13,9 @@
     <p id = "result"> </p>
     <script>
         function difference() {
-            var n = document.getElementById('id').alue;
-            var dif=0;
-            if (n <= 13) {
-                dif= 13 - n;
-            } else {
-                dif= (n - 13) * 2;
-            }
+            var x = document.getElementById('id').value;
+            var dif=(Math.abs(100 - x) <= 20) || (Math.abs(400 - x) <= 20);
+            
             document.getElementById('result').innerHTML= dif;
 
 }
