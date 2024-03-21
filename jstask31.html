@@ -29,11 +29,14 @@
         z=parseInt(z);
 
  
-        if (x< 90 && x>50 || y<90 && y>50 || z<90 && z>50) {
-            var check = true;
+        if (x> y && x>z)  {
+            var check = "The first number is the biggest";
          } 
+         else if(y>z){
+            check = "The second number is the biggest";
+         }
          else{
-            var check = false;
+            check = "The third number is the biggest";
          }
         document.getElementById('result').innerHTML= check;
 
