@@ -15,3 +15,7 @@ check_integer(10.5);
 catch(error){
     console.log("Error: ", error);
 }
+finally
+{
+    console.log("Aiza Ihsan");
+}
