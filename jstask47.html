@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h2>Check Number within Range </h2>
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
+    <form>
+        <label for= "start" > start: </label>
+        <input type="start" placeholder="Enter starting range" id="start" value="" /><br>
+        <label for= "end" > end: </label>
+        <input type="end" placeholder="Enter Ending range" id="end" value="" /><br>
+               <label for= "Number" > end: </label>
+        <input type="Number" placeholder="Enter Number want to search" id="Number" value="" /><br>
+
+        <input type="button" onclick="check()" Value="check" />
+        </form>
+        <p id = "result"></p>
+
+
+    <script>
+    function check() {
+
+        var x= document.getElementById('start').value;
+        var y=document.getElementById('end').value;
+        var z = document.getElementById('Number').value;
+    
+        x=  parseInt(x);
+        y=parseInt(y);
+        z = parseInt(z);
+
+        if (z < 40 || z > 10000)
+       
+         var check= false;
+        else
+        {
+         if (z >= x && z <= y)
+        {
+           
+            check= true;
+        }
+        else{
+            
+            check= false;
+        }
+    }
+        document.getElementById('result').innerHTML= check;
+
+    
+}
+
+    </script>
+    
+</body>
+</html>

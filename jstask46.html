@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h2>Multiple of 7 or 11</h2>
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
+    <form>
+        <label for= "Number1" > Number 1: </label>
+        <input type="number" placeholder="Enter 1st number" id="Number1" value="" /><br>
+        <label for= "Number2" > Number 2: </label>
+        <input type="number" placeholder="Enter 2nd number" id="Number2" value="" /><br>
+        <input type="button" onclick="check()" Value="check" />
+        </form>
+        <p id = "result"></p>
+
+
+    <script>
+    function check() {
+
+        var x= document.getElementById('Number1').value;
+        var y=document.getElementById('Number2').value;
+    
+        x=  parseInt(x);
+        y=parseInt(y);
+    
+
+
+    if (x>0 && y>0 )
+    {
+        if ((x% 7 == 0 ||x % 11 ==0) && (y% 7 != 0 && y % 11!=0) ) {
+            var check = true;
+         } 
+         else if((y% 7 == 0 || y % 11==0) &&(x% 7 != 0 && x % 11!=0))
+         {
+            var check = true;
+         }
+         else{
+            var check = false;
+         }
+    }
+    else{
+        check = "Number is Negative";
+
+    }
+
+        document.getElementById('result').innerHTML= check;
+
+    }
+
+    </script>
+    
+</body>
+</html>
