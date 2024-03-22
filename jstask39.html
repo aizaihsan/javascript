@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<h2>Sum of Two Integers and Check if its in range of 50 to 80 </h2>
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
     <form>
         <label for= "Number1" > Number 1: </label>
         <input type="number" placeholder="Enter 1st number" id="Number1" value="" /><br>
@@ -21,15 +23,16 @@
 
         var x= document.getElementById('Number1').value;
         var y=document.getElementById('Number2').value;
+    
         x=  parseInt(x);
         y=parseInt(y);
-
+    
  
-        if (((x>= 40 && x<=60) || (x>=70 && x<=100)) && (( y>=70 && y<=100) || (y>=40 && y<=60 ))) {
-            var check = true;
+        if (x+y > 50 && x+y <80) {
+            var check = 65;
          } 
          else{
-            var check = false;
+            var check = 80;
          }
         document.getElementById('result').innerHTML= check;
 

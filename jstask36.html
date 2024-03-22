@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<h2> Check last digit of number is same or not</h2>
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
     <form>
         <label for= "Number1" > Number 1: </label>
         <input type="number" placeholder="Enter 1st number" id="Number1" value="" /><br>
         <label for= "Number2" > Number 2: </label>
         <input type="number" placeholder="Enter 2nd number" id="Number2" value="" /><br>
+        <label for= "Number3" > Number 3: </label>
+        <input type="number" placeholder="Enter 3rd number" id="Number3" value="" /><br>
         <input type="button" onclick="check()" Value="check" />
         </form>
         <p id = "result"></p>
@@ -21,16 +25,26 @@
 
         var x= document.getElementById('Number1').value;
         var y=document.getElementById('Number2').value;
+        var z=document.getElementById('Number3').value;
         x=  parseInt(x);
         y=parseInt(y);
+        z=parseInt(z);
 
- 
-        if (((x>= 40 && x<=60) || (x>=70 && x<=100)) && (( y>=70 && y<=100) || (y>=40 && y<=60 ))) {
+
+    if (x>0 && y>0 && z>0)
+    {
+        if ((x% 10 == y%10) && (x%10 == z %10)){
             var check = true;
          } 
          else{
             var check = false;
          }
+    }
+    else{
+        check = "Number is Negative";
+
+    }
+
         document.getElementById('result').innerHTML= check;
 
     }

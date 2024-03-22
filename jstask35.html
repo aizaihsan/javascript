@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find String</title>
+
+
+</head>
+<h2> Find A Character Between 2nd and 4th position</h2>
+
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
+    <label for = "String"> String  </label>
+    <input type="text" id="id" placeholder=" Enter a String" ><br><br>
+    <label for = "text"> character  </label>
+    <input style="height: fit-content; width:260px ;" type="text" id="id1" placeholder=" Enter a character you want to search" > <br><br>
+   
+    <button  onclick = "find_string()"> submit </button>
+    <p id = "result"> </p>
+    <script>
+   function find_string() {
+    var str = document.getElementById('id').value;
+    var chr = document.getElementById('id1').value;
+    for (let i = 1; i <4;i++)
+    {
+        if (str.charAt(i) == chr)
+    {
+        str= "character found";
+        break;
+    }
+    else{
+
+        str = "Character not found";
+    }
+
+    }
+    
+    document.getElementById('result').innerHTML= str;
+
+
+}
+    </script>
+</body>
+</html>

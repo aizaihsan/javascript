@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculation</title>
+</head>
+
+<h2>Grade Calculation </h2>
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
+    <form>
+        <label for= "Number1" > Number 1: </label>
+        <input type="number" placeholder="Enter Total Marks" id="Number1" value="" /><br>
+        <label for = "text"> character  </label>
+        <input style="height: fit-content; width:260px ;" type="text" id="id1" placeholder="Final Examination True / False" > <br><br>
+        <input type="button" onclick="check()" Value="check" />
+        </form>
+        <p id = "result"></p>
+
+
+    <script>
+    function check() {
+
+        var x= document.getElementById('Number1').value;
+        var y=document.getElementById('id1').value;
+    
+    
+        x=  parseInt(x);
+     
+        if (y== "True")
+        {
+            if (x>=90 && x<=100) {
+            var check = "A+";
+
+         } 
+         else{
+            var check = "";
+         }
+        }
+        else{
+            if (x>=89 && x<=100) {
+            var check = "A+";
+
+         } 
+         else{
+            var check = "";
+         }
+        }
+
+    
+    
+ 
+       
+        document.getElementById('result').innerHTML= check;
+
+    }
+
+    </script>
+    
+</body>
+</html>

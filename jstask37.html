@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find String</title>
+
+
+</head>
+<h2>Convert First 3 in lower case</h2>
+
+<body style="text-align: center; padding-top: 100px ; background-color: beige; ">
+   
+    <label for = "text"> String  </label>
+    <input style="height: fit-content; width:260px ;" type="text" id="id" placeholder=" Enter a character you want to search" > <br><br>
+   
+    <button  onclick = "lowercase_string()"> submit </button>
+    <p id = "result"> </p>
+    <script>
+   function lowercase_string() {
+    var str = document.getElementById('id').value;
+    var str1,str2;
+    if(str.length > 2)
+    {
+    
+        str2= str.substring(0,3);
+        str1=str2.toLowerCase()+str.substring(3,str.length);
+    }
+    
+    document.getElementById('result').innerHTML= str1;
+
+
+}
+    </script>
+</body>
+</html>
